@@ -4,8 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest --verbose --runInBand",
+    "test": "jest --verbose --runInBand --passWithNoTests",
     "test:watch": "npm run test -- --watch",
+    "create-tables": "node lib/data/create-tables.js",
+    "drop-tables": "node lib/data/drop-tables.js",
+    "load-seed-data": "node lib/data/load-seed-data.js",
+    "recreate-tables": "npm run drop-tables && npm run create-tables",
+    "setup-db": "npm run recreate-tables && npm run load-seed-data",
+    "setup-db:prod": "heroku run npm run setup-db",
     "start": "node server.js",
     "start:watch": "nodemon server.js"
   },
