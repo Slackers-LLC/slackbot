@@ -1,4 +1,4 @@
-require('./lib/utils/client')();
+require('./lib/utils/client.js');
 
 const app = require('./lib/app');
 
