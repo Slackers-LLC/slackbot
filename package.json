@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest --verbose --runInBand",
+    "test": "jest --verbose --runInBand --passWithNoTests",
     "test:watch": "npm run test -- --watch",
     "create-tables": "node lib/data/create-tables.js",
     "drop-tables": "node lib/data/drop-tables.js",

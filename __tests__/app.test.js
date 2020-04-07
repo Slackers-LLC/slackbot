@@ -1,20 +1,19 @@
-require('dotenv').config();
-
 const request = require('supertest');
 const app = require('../lib/app');
-const connect = require('../lib/utils/connect');
-const mongoose = require('mongoose');
+// const connect = require('../lib/utils/connect');
+const client = require('../lib/utils/client.js');
+// const mongoose = require('mongoose');
 
 describe('app routes', () => {
   beforeAll(() => {
-    connect();
+    // connect();
   });
 
   beforeEach(() => {
-    return mongoose.connection.dropDatabase();
+    // return mongoose.connection.dropDatabase();
   });
 
   afterAll(() => {
-    return mongoose.connection.close();
+    // return mongoose.connection.close();
   });
 });
